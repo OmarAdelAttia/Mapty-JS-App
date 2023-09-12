@@ -1,7 +1,7 @@
 'use strict';
 // prettier-ignore
 
-import * as element from "./elements.js";
+import * as element from './elements.js';
 import * as method from './methods.js';
 
 if (navigator.geolocation)
@@ -17,8 +17,25 @@ if (navigator.geolocation)
       attribution:
         '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     }).addTo(map);
-    L.marker(coords)
-      .addTo(map)
-      .bindPopup('A pretty CSS popup.<br> Easily customizable.')
-      .openPopup();
-  }, method.errorCallback());
+
+    //   console.log(map);
+    map.on('click', mapEvent => {
+      element.form.classList.remove('hidden');
+      // // console.log(mapEvent);
+      // // console.log(mapEvent.latlng);
+      // const { lat, lng } = mapEvent.latlng;
+      // L.marker([lat, lng])
+      //   .addTo(map)
+      //   .bindPopup(L.popup({
+      //     maxWidth: 250,
+      //     minWidth: 100,
+      //     autoClose: false,
+      //     closeOnClick: false,
+      //     className: 'running-popup'
+      //     // className: 'cycling-popup',
+      //   }))
+      //   .setPopupContent('workout')
+      //   .openPopup();
+    });
+  }, method.errorCallback);
+
