@@ -236,6 +236,10 @@ class App {
         <span class="workout__value">${workout.type === 'running' ? workout.cadence : workout.elevationGain}</span>
         <span class="workout__unit">${workout.type === 'running' ? 'spm' : 'm'}</span>
       </div>
+      <!-- <div class="workout__details"> -->
+        <!-- <span class="workout__edit--btn">Edit</span> -->
+        <!-- <span class="workout__delete--btn">Delete</span> -->
+      <!-- </div> -->
     </li>
     `
 
