@@ -270,7 +270,7 @@ class App {
 
   _getLocalStorage() {
     const data = JSON.parse(localStorage.getItem('workouts'));
-    
+
     // console.log(data);
     // data.forEach(val => console.log(val.id));
 
